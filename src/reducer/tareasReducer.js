@@ -10,9 +10,15 @@ export const tareasReducer = (state = [], action) => {
     // console.log(action.payload)
        
     ;
-    case 'toogle tarea':
-      
 
+    case 'toogle tarea':
+
+      return state.map((tarea) =>
+          tarea.id === action.payload
+            ? { ...tarea, done: !tarea.done }
+            : tarea
+        )
+      
     ;
 
     case 'delete tarea':

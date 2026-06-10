@@ -7,7 +7,7 @@ import { useToDoList } from './hooks/useToDoList'
 
 function App() {
 
-  const {handleAddTarea} = useToDoList()
+  const {tareas, handleAddTarea, handleToggleTarea, handleDeleteTarea} = useToDoList()
   
 
 
@@ -18,7 +18,7 @@ function App() {
       </header>
       <main>
         <Formulario handleAddTarea= {handleAddTarea}/>
-          <SeccionTareas/>
+          <SeccionTareas handleToggleTarea={handleToggleTarea} tareas={tareas} handleDeleteTarea={handleDeleteTarea}/>
       </main>
       <footer>Práctica TodoList</footer>
 
