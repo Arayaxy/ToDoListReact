@@ -1,15 +1,15 @@
- import useReducer from "react"
+import {useReducer} from "react"
 import { tareasReducer } from "../reducer/tareasReducer"
 
  export const useToDoList = () => {
-  const [tareas, dispatch] = useReducer(tareasReducer, [], init)
+  const [tareas, dispatch] = useReducer(tareasReducer, [])
 
-  const handleAddTarea = (newTarea)=>{
+  const handleAddTarea = (nuevaTarea)=>{
     const action = {
         type: "add tarea",
-        payload: newTarea
+        payload: nuevaTarea
     }
-
+   
     dispatch(action)
 
   }

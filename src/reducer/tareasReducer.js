@@ -3,9 +3,10 @@ import React from 'react'
 export const tareasReducer = (state = [], action) => {
 
   switch(action.type){
-    case 'TODO: add tarea':
-       
+    case 'add tarea':
 
+    console.log(action.payload)
+       
     ;
     case 'TODO: toogle tarea':
 
