@@ -5,14 +5,18 @@ export const tareasReducer = (state = [], action) => {
   switch(action.type){
     case 'add tarea':
 
-    console.log(action.payload)
+    return[...state, action.payload]
+
+    // console.log(action.payload)
        
     ;
-    case 'TODO: toogle tarea':
+    case 'toogle tarea':
+      
 
     ;
 
-    case 'TODO: delete tarea':
+    case 'delete tarea':
+      return state.filter(tarea => tarea.id != action.payload)
     ;
 
     default: 

@@ -15,14 +15,25 @@ import { tareasReducer } from "../reducer/tareasReducer"
   }
 
   const handleToggleTarea = (id)=>{
-    // const action = {
-    //     type: "toggle tarea",
-    //     payload: id
-    //
-     }
- const handleDeleteTarea = (deleteTarea)=>{
 
   }
+
+ const handleDeleteTarea = (id) =>{
+
+  const action = {
+    type: "delete tarea",
+    payload: id
+
+  }
+
+  dispatch(action)
+  
+
+  }
+
+
+
+
     return {
     tareas,
     handleAddTarea,
@@ -32,6 +43,4 @@ import { tareasReducer } from "../reducer/tareasReducer"
 }
 
  
-   
-
 
