@@ -1,7 +1,7 @@
 import { Tareas } from "./Tareas"
 
-export const SeccionTareas = () => {
+export const SeccionTareas = ({tareas, handleToggleTarea}) => {
   return (
-    <Tareas/>
+    <Tareas tareas= {tareas} handleToggleTarea={handleToggleTarea}/>
   )
 }

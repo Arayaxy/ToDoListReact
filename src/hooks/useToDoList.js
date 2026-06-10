@@ -1,29 +1,33 @@
-import {useReducer} from "react"
+import { useReducer } from "react"
 import { tareasReducer } from "../reducer/tareasReducer"
 
- export const useToDoList = () => {
+export const useToDoList = () => {
   const [tareas, dispatch] = useReducer(tareasReducer, [])
 
-  const handleAddTarea = (nuevaTarea)=>{
+  const handleAddTarea = (nuevaTarea) => {
     const action = {
-        type: "add tarea",
-        payload: nuevaTarea
+      type: "add tarea",
+      payload: nuevaTarea
     }
-   
+
     dispatch(action)
 
   }
 
-  const handleToggleTarea = (id)=>{
-    // const action = {
-    //     type: "toggle tarea",
-    //     payload: id
-    //
-     }
- const handleDeleteTarea = (deleteTarea)=>{
+  const handleToggleTarea = (id) => {
+    const action = {
+      type: "toggle tarea",
+      payload: id
+    }
+    dispatch(action)
+  }
+
+  const handleDeleteTarea = (deleteTarea) => {
 
   }
-    return {
+
+
+  return {
     tareas,
     handleAddTarea,
     handleToggleTarea,
@@ -31,7 +35,6 @@ import { tareasReducer } from "../reducer/tareasReducer"
   }
 }
 
- 
-   
+
 
 
