@@ -1,7 +1,11 @@
 
-export const Tareas = ({ tareas, handleToggleTarea }) => {
+
+export const Tareas = ({tareas, handleToggleTarea, handleDeleteTarea}) => {
   return (
-    <section>
+
+    <>
+
+  <section>
     {tareas.map((tarea) => (
       <article key={tarea.id}>
         <h3>{tarea.tarea}</h3>
@@ -10,8 +14,15 @@ export const Tareas = ({ tareas, handleToggleTarea }) => {
       <button onClick={( ) => handleToggleTarea(tarea.id)}>
         {tarea.done ? "Finalizada" : " En Proceso"}
       </button>
+
+      <button onClick= {() => handleDeleteTarea(tarea.id)} type="button">Eliminar</button>
       </article>
     ))}
   </section>
+
+  
+
+  </>
+
   )
 }

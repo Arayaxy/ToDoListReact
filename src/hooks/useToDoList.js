@@ -14,20 +14,31 @@ export const useToDoList = () => {
 
   }
 
-  const handleToggleTarea = (id) => {
+  const handleToggleTarea = (id)=>{
+
     const action = {
       type: "toggle tarea",
       payload: id
     }
     dispatch(action)
-  }
-
-  const handleDeleteTarea = (deleteTarea) => {
 
   }
 
+ const handleDeleteTarea = (id) =>{
 
-  return {
+  const action = {
+    type: "delete tarea",
+    payload: id
+
+  }
+
+  dispatch(action)
+  
+
+  }
+
+
+    return {
     tareas,
     handleAddTarea,
     handleToggleTarea,
@@ -35,6 +46,5 @@ export const useToDoList = () => {
   }
 }
 
-
-
+ 
 
